@@ -85,4 +85,27 @@ let list = arrayToList(arrayList);
 console.log(list);
 console.log(listToArray(list));
 console.log(prepend(54, list));
-console.log(nth(list, 5))
+console.log(nth(list, 2))
+//--------------------------------------------------------------
+//Fourth task
+//--------------------------------------------------------------
+function deepEqual(firstObject, secondObject){
+    if (typeof firstObject === "object" && typeof secondObject === "object"){
+        let firstArray = Object.keys(firstObject), secondArray = Object.keys(secondObject);
+        if(firstArray.length === secondArray.length){
+            for(let i = 0; i <= firstArray.length - 1; i++){
+                if(firstArray[i] !== secondArray[i]){return false;}
+            }
+            for(let i = 0; i <= firstArray.length - 1; i++){
+                if(firstObject[firstArray[i]] !== secondObject[secondArray[i]]){return false;}
+            }
+            return true;
+        }
+        else{ return false;}
+    }
+    else if(firstObject === secondObject){return true;}
+    return false;
+}
+let firstObject = {value: 1, rate: 2};
+let secondObject = {value: 1, rate: 2};
+console.log(deepEqual(firstObject, secondObject));
