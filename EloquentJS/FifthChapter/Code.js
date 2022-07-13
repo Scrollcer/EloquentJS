@@ -7,7 +7,7 @@ let arrayArrays = [array1, array2];
 let finalArray = [];
 let result = arrayArrays.reduce((previousValue, currentValue) => previousValue.concat() + currentValue.concat() + ",",
     finalArray);
-console.log(result);
+console.log(result.slice(0, -1));
 //--------------------------------------------------------
 //Second task
 //--------------------------------------------------------
@@ -30,3 +30,17 @@ function loop(value = 0,
 }
 loop();
 console.log(b);
+//--------------------------------------------------------
+//Third task
+//--------------------------------------------------------
+array = [2,4]
+func = function (num) {
+    return num % 2 == 0;
+}
+function every(array, func){
+for(let element in array){
+    if(func(array[element]) !== true){return false;}
+}
+    return true;
+}
+console.log(every(array, func))
