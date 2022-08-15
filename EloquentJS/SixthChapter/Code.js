@@ -81,4 +81,3 @@ console.log(object2.next())
 console.log(object2.next())
 console.log(object2.next())
 
-let person = {name: vasia, age: 12};
