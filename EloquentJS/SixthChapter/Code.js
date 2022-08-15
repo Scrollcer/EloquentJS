@@ -80,4 +80,3 @@ console.log(object2.from(iterObject));
 console.log(object2.next())
 console.log(object2.next())
 console.log(object2.next())
-
