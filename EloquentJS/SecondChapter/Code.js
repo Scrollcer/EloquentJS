@@ -31,23 +31,18 @@ for(let i = 0; i<=100; i++)
 //------------------------------------
 //Third task
 //------------------------------------
-let size = 8;
-let c = "";
-let b = "";
-let check = false;
-for (let i = 0; i < size; i++){
-    if (check == false){
-        c += "#";
-        b += " ";
-        check = true;
-    }
-    else{
-        c += " ";
-        b += "#";
-        check = false;
-    }
+let result = "";
+const size = 8;
+for (let i =0; i < size / 2; i++) {
+for(let j = 0; j < size / 2; j++) {
+ result += " ";
+ result += "#";
 }
-for (let i = 0; i < (size/2); i++){
-    console.log(c);
-    console.log(b);
+result += '\n';
+for(let x = 0; x < size / 2; x++) {
+ result += "#";
+ result += " ";
 }
+result += '\n';
+}
+console.log(result);
